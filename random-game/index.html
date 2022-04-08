@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">2048</div>
+    </header>
+    <main class="main">
+      <div class="info">Press "A", "W", "S", "D" for play</div>
+      <div class="info-wrapper">
+        <h4 class="score-name">Score:</h4>
+        <span class="score">0</span>
+        <h4 class="score-name">Moves:</h4>
+        <span class="moves">0</span>
+        <button class="btn before" disabled>&#8630</button>
+        <button class="btn restart">&#8634</button>
+      </div>
+      <div class="result"></div>
+      <div class="wrapper">
+        <audio src="./assets/audio/step.mp3"></audio>
+        <div class="board"></div>
+        <div class="rating">
+          <div class="best"></div>
+          <div class="last"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="copyrights"><span>©</span><span>2022</span><a href="https://github.com/KseniaVislova">github</a></div>
+      <a href="https://rs.school/js-stage0/ " class="rs"></a>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

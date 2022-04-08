@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eco-sounds</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/favicon.ico">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <img src="./assets/svg/logo1.svg" alt="logo" class="logo tab" data-bird="forest">
+      <ul class="birds-list">
+        <li class="birds-item">
+          <button class="tab active" data-bird="drozd">Дрозд</button>
+          <div class="circle"></div>
+        </li>
+        <li class="birds-item">
+          <button class="tab" data-bird="javoronok">Жаворонок</button>
+          <div class="circle"></div>
+        </li>
+        <li class="birds-item">
+          <button class="tab" data-bird="slavka">Славка</button>
+          <div class="circle"></div>
+        </li>
+        <li class="birds-item">
+          <button class="tab" data-bird="solovey">Соловей</button>
+          <div class="circle"></div>
+        </li>
+        <li class="birds-item">
+          <button class="tab" data-bird="zarynka">Заринка</button>
+          <div class="circle"></div>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <audio src="./assets/audio/forest.mp3"></audio>
+      <button class="audio-btn play-btn"></button>
+    </main>
+    <footer class="footer">
+      <div class="copyrights"><span>©</span><span>2022</span><a href="https://github.com/KseniaVislova">github</a></div>
+      <a href="https://rs.school/js-stage0/ " class="rs"></a>
+    </footer>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">Movie App</div>
+      <ul class="tab">
+        <li data-type="movie" class="tab-item active">Movie</li>
+        <li data-type="tv" class="tab-item">TV</li>
+      </ul>
+      <form id="form" class="form">
+        <input type="text" id="search" placeholder="search" class="search" autocomplete="off">
+        <button class="btn-close">x</button>
+      </form>
+    </header>
+    <main id="movies" class="main"></main>
+    <footer class="footer">
+      <div class="copyrights"><span>© 2022</span><a href="https://github.com/KseniaVislova">github</a></div>
+      <a href="https://rs.school/js-stage0/ " class="rs"></a>
+    </footer>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+:root {
+  --color-text: #AEF2EF;
+  --color-body: #0A3E3C;
+  --color-hover: #137A75;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-body);
+}
+
+.wrapper {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--color-body);
+}
+
+.logo {
+  width: 70px;
+  transition: 1s;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 40px var(--color-text)) contrast(0%);
+  transition: 1s;
+}
+
+img.active {
+  filter: drop-shadow(0 0 40px var(--color-text)) contrast(0%);
+  transition: 1s;
+}
+
+.birds-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.birds-item {
+  position: relative;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.birds-item:hover {
+  box-shadow: 0 0 10px 5px var(--color-hover);
+  transition-delay: 1s;
+  transition-duration: 1s;
+}
+
+.birds-item:hover::after {
+  position: absolute;
+  content: '';
+  width: 110%;
+  height: 55%;
+  top: 0;
+  background-color: #137e75;
+  animation: top 1s ease-in-out;
+}
+
+.birds-item:hover::before {
+  position: absolute;
+  content: '';
+  width: 110%;
+  height: 55%;
+  top: 50%;
+  background-color: #137e75;
+  animation: bottom 1s ease-in-out;
+}
+
+@keyframes top {
+  from {
+    opacity: 0;
+    top: -50%;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes bottom {
+  from {
+    opacity: 0;
+    top: 100%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+.tab {
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 1s;
+  z-index: 100;
+}
+
+.tab span {
+  z-index: 100;
+}
+
+.tab:hover {
+  background-color: transparent;
+  transition: 1s;
+}
+
+.active + .circle {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: 10%;
+  background: var(--color-hover);
+  border-radius: 50%;
+  animation: circle 1s ease-in-out;
+  transition: 1s;
+}
+
+.birds-item:hover .active + .circle  {
+  color: var(--color-text);
+  background-color: var(--color-body);
+  z-index: 50;
+  transition: 1s;
+}
+
+
+@keyframes circle {
+  from {
+    opacity: 0;
+    top: 100%;
+  }
+  to {
+    opacity: 1;
+    top: 10%;
+  }
+}
+
+
+
+.main {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: stretch;
+  background-image: url('./assets/img/forest.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.audio-btn {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.audio-btn:hover {
+  filter: drop-shadow(0 0 40px var(--color-text)) brightness(200%);
+  transition: 1s;
+}
+
+.play-btn {
+  background-image: url('./assets/svg/play.svg');
+}
+
+.pause-btn {
+  background-image: url('./assets/svg/pause.svg');
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--color-body);
+}
+
+.copyrights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+}
+
+.copyrights a {
+  color: var(--color-text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.copyrights a:hover {
+  filter: drop-shadow(0 0 40px var(--color-text)) contrast(0%);
+  transition: 1s;
+}
+
+.rs {
+  display: block;
+  width: 150px;
+  height: 70px;
+  background-image: url('./assets/svg/rss.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: 1s;
+}
+
+.rs:hover {
+  filter: drop-shadow(0 0 40px var(--color-text)) contrast(0%);
+  transition: 1s;
+}

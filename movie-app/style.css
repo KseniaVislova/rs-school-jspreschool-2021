@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f64c72;
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+  background-color: #242582;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.logo {
+  font-size: 40px;
+  color: #f64c72;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #0ff,
+                0 0 80px #0ff,
+                0 0 90px #0ff,
+                0 0 100px #0ff,
+                0 0 150px #0ff;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-left: 0;
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.tab-item {
+  display: block;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #0ff;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #f64c72;
+}
+
+.form {
+  position: relative;
+}
+
+.search {
+  padding: 10px;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #0ff;
+}
+
+.search:focus {
+  border: 1px solid #f64c72;
+  outline: none;
+}
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: #f64c72;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+  width: 300px;
+  padding: 20px 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #fff,
+              0 0 10px #f64c72,
+              0 0 20px #fff;
+  overflow: hidden;
+}
+
+.item img {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.item-title {
+  display: inline-block;
+  color: #f64c72;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #0ff;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.item-overview {
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  max-height: 100%;
+  padding: 20px;
+  background-color: #242582;
+  transition: all 1s ease-in-out;
+  overflow-y: auto;
+}
+
+.item:hover .item-overview {
+  bottom: 0;
+  transition: all 1s ease-in-out;
+}
+
+h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.overage {
+  display: block;
+  padding: 5px;
+  background-color: #24828077;
+  border-radius: 5px;
+}
+
+.red {
+  color: rgb(203, 92, 92);
+}
+
+.yellow {
+  color: rgb(228, 165, 98);
+}
+
+.green {
+  color: rgb(56, 188, 29);
+}
+
+.date {
+  text-transform: uppercase;
+}
+
+.date span {
+  display: block;
+  padding: 5px;
+  background-color: #24828077;
+  border-radius: 5px;
+  text-align: center;
+  color: #f64c72;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.copyrights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.rs {
+  display: block;
+  padding: 45px;
+  background-image: url('./assets/svg/rss.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+  }  
+}
